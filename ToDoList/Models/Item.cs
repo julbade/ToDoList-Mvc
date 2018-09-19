@@ -27,7 +27,7 @@ namespace ToDoList.Models
       Item newItem = (Item) otherItem;
       bool idEquality = (this.GetId() == newItem.GetId());
       bool descriptionEquality = (this.GetDescription() == newItem.GetDescription());
-      return (descriptionEquality);
+      return (idEquality && descriptionEquality);
       }
     }
     public string GetDescription()
@@ -42,10 +42,7 @@ namespace ToDoList.Models
     {
       return _id;
     }
-    public void SetId(int newId)
-    {
-      _id = newId;
-    }
+
 
 
 
